@@ -1,0 +1,42 @@
+-> Registration,
+    - play house,
+    - school (- board, - medium, class category, standard and subject) 
+    - collage,
+    - competitive exam center,
+
+-> Tables :
+1) Institute :
+    - name,
+    - type,
+
+2) User :
+    - name,
+    - role
+    - institute_id,
+    - password,
+    - email,
+
+3) Board: 
+    - institute_id,
+    - name,
+
+4) Medium:
+    - board_id,
+    - name,
+    - institute_id
+
+5) Class_category: 
+    - institute_id,
+    - board_id,
+    - medium_id,
+    - name,
+
+6) standard: 
+    - institute_id,
+    - board_id,
+    - medium_id,
+    - class_category_id,
+    - standard_name,
+
+7) subject: 
+    - 
