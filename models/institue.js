@@ -8,25 +8,21 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-      // Institute.hasMany(models.User, {
-      //   foreignKey: "institute_id",
-      // });
-      // Institute.hasMany(models.Board, {
-      //   foreignKey: "institute_id",
-      // });
-      // Institute.hasMany(models.Class_category, {
-      //   foreignKey: "institute_id",
-      // });
-      // Institute.hasMany(models.Medium, {
-      //   foreignKey: "institute_id",
-      // });
-      // Institute.hasMany(models.Course, {
-      //   foreignKey: "institute_id",
-      // });
-      // Institute.hasMany(models.standard, {
-      //   foreignKey: "institute_id",
-      // });
+      Institute.hasMany(models.User, {
+        foreignKey: "institute_id",
+      });
+      Institute.hasMany(models.Board, {
+        foreignKey: "institute_id",
+      });
+      Institute.hasMany(models.Class_category, {
+        foreignKey: "institute_id",
+      });
+      Institute.hasMany(models.Medium, {
+        foreignKey: "institute_id",
+      });
+      Institute.hasMany(models.standard, {
+        foreignKey: "institute_id",
+      });
     }
   }
   Institute.init(

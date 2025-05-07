@@ -11,12 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      // Board.belongsTo(models.Institute, {
-      //   foreignKey: "institute_id",
-      // });
-      // Board.hasMany(models.Class_category, {
-      //   foreignKey: "board_id",
-      // });
+      Board.belongsTo(models.Institute, {
+        foreignKey: "institute_id",
+      });
+      Board.hasMany(models.Class_category, {
+        foreignKey: "board_id",
+      });
+      Board.hasMany(models.standard, {
+        foreignKey: "board_id",
+      });
     }
   }
   Board.init({

@@ -11,15 +11,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      // Class_category.belongsTo(models.Institute, {
-      //   foreignKey: 'institute_id',
-      // });
-      // Class_category.belongsTo(models.Board, {
-      //   foreignKey: 'board_id',
-      // });
-      // Class_category.belongsTo(models.Medium, {
-      //   foreignKey: 'medium_id',
-      // });
+      Class_category.belongsTo(models.Institute, {
+        foreignKey: 'institute_id',
+      });
+      Class_category.belongsTo(models.Board, {
+        foreignKey: 'board_id',
+      });
+      Class_category.belongsTo(models.Medium, {
+        foreignKey: 'medium_id',
+      });
+      Class_category.hasMany(models.standard, {
+        foreignKey: 'class_category_id',
+      });
     }
   }
   Class_category.init({

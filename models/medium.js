@@ -9,12 +9,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      // Medium.belongsTo(models.Institute, {
-      //   foreignKey: "institute_id",
-      // });
-      // Medium.belongsTo(models.Board, {
-      //   foreignKey: "board_id",
-      // });
+      Medium.belongsTo(models.Institute, {
+        foreignKey: "institute_id",
+      });
+      Medium.belongsTo(models.Board, {
+        foreignKey: "board_id",
+      });
+      Medium.hasMany(models.Class_category, {
+        foreignKey: "medium_id",
+      });
+      Medium.hasMany(models.standard, {
+        foreignKey: "medium_id",
+      });
     }
   }
   Medium.init(
